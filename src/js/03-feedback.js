@@ -17,7 +17,7 @@ function onFormSubmit(event) {
   localStorage.removeItem(STORAGE_KEY);
 }
 
-formEl.addEventListener('input', onFormTextInput);
+formEl.addEventListener('input', throttle(onFormTextInput, 500));
 
 function onFormTextInput(event) {
   formData[event.target.name] = event.target.value;
