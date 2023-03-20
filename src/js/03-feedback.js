@@ -29,7 +29,7 @@ function populateInput() {
   const parsed = JSON.parse(savedText);
 
   if (parsed) {
-    inputEl.value = parsed.email || '';
-    textareaEl.value = parsed.message || '';
+    inputEl.value = parsed.email;
+    textareaEl.value = parsed.message;
   }
 }
